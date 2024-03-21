@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PasskeyAppv2",
-    "slug": "PasskeyAppv2",
+    "name": "passkeyappv-2",
+    "slug": "passkeyappv2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,21 +19,14 @@
       "associatedDomains": [
         "webcredentials:passkeyappv2.myfluff.us"
       ],
-      "bundleIdentifier": "us.myfluff.passkeyappv2"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "us.myfluff.passkeyappv2"
+      "bundleIdentifier": "us.myfluff.passkeyappv-2"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "5d27537d-93bb-4916-bc16-aa975947e4b9"
+        "projectId": "b1dfa571-3eff-42cd-9df3-29303d7bfe40"
       }
     }
   }

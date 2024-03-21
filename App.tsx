@@ -83,7 +83,7 @@ async function onPasskeySignature() {
     });
     const client = new TurnkeyClient({baseUrl: "https://api.turnkey.com"}, stamper);
     const getWhoamiResult = await client.getWhoami({
-      organizationId: 'ac8e82be-9cf9-432e-92b9-2b80084dbacc'
+      organizationId: process.env.EXPO_PUBLIC_TURNKEY_ORGANIZATION_ID
     })
     console.log("passkey authentication succeeded: ", getWhoamiResult);
     alert(`Successfully logged into sub-organization ${getWhoamiResult.organizationId}`)
@@ -94,15 +94,15 @@ async function onPasskeySignature() {
 
 async function createSubOrganization(authenticatorParams: Awaited<ReturnType<typeof createPasskey>>) {
   const stamper = new ApiKeyStamper({
-    apiPublicKey: '02f1bc4d467d2d0853e2ba3c8eb51eaaf212d2e051e984b1a191f91b93369969e3',
-      apiPrivateKey: '316f89447f3ab761dc80ae6c4e01f418c1119c657035201a670f4672577a4ae7',
+    apiPublicKey: process.env.EXPO_PUBLIC_TURNKEY_API_PUBLIC_KEY,
+    apiPrivateKey: process.env.EXPO_PUBLIC_TURNKEY_API_PRIVATE_KEY,
   });
   const client = new TurnkeyClient({baseUrl: "https://api.turnkey.com"}, stamper);
 
   const data = await client.createSubOrganization({
     type: "ACTIVITY_TYPE_CREATE_SUB_ORGANIZATION_V4",
     timestampMs: String(Date.now()),
-    organizationId: 'ac8e82be-9cf9-432e-92b9-2b80084dbacc',
+    organizationId: process.env.EXPO_PUBLIC_TURNKEY_ORGANIZATION_ID,
     parameters: {
       subOrganizationName: `Sub-organization at ${String(Date.now())}`,
       rootQuorumThreshold: 1,
