@@ -1,0 +1,28 @@
+{
+  "cli": {
+    "version": ">= 7.1.2",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_TURNKEY_ORGANIZATION_ID": "<your turnkey organization ID>",
+        "EXPO_PUBLIC_TURNKEY_API_PUBLIC_KEY": "<your turnkey API public key>",
+        "EXPO_PUBLIC_TURNKEY_API_PRIVATE_KEY": "<your turnkey API private key>"
+      },
+      "android":  {
+        "buildType": "apk",
+        "credentialsSource": "local"
+      }
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {}
+  }
+}
