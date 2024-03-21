@@ -2,7 +2,7 @@
   "expo": {
     "name": "passkeyappv-2",
     "slug": "passkeyappv2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,9 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "associatedDomains": [
-        "webcredentials:passkeyappv2.myfluff.us"
-      ],
+      "associatedDomains": ["applinks:myfluff.us", "applinks:www.myfluff.us"],
       "bundleIdentifier": "us.myfluff.passkeyv5"
     },
     "web": {
