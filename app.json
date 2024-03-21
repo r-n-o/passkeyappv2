@@ -19,7 +19,7 @@
       "associatedDomains": [
         "webcredentials:passkeyappv2.myfluff.us"
       ],
-      "bundleIdentifier": "us.myfluff.passkeyappv-2"
+      "bundleIdentifier": "us.myfluff.passkeyv5"
     },
     "web": {
       "favicon": "./assets/favicon.png"
